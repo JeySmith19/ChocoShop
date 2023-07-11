@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+          <img src="img/chocolate.png" alt="Icono de la tienda de chocolate" class="logo-image">
+          ChocoShop
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Inicio</a></li>
+          <li><a href="#productos" class="nav-link">productos</a></li>
+          <li><a href="#what" class="nav-link">¿Porqué comprar en ChocoShop?</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=928067140" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+      
+
+    <div id="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=928067140" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="banner" id="home">
+        <img src="img/chocolate.png" alt="img logo chocolate" class="banner-image">
+        <h1 class="banner-title">¡Bienvenido a nuestra tienda ChocoShop!</h1>
+        <p class="banner-subtitle">Descubre nuestros deliciosos productos hechos con amor.</p>
+        <a href="#" class="button">Explorar</a>
+      </div>
+
+    <div class="container" id="productos">
+        <div class="presentacion">
+            <h1>ChocoShop</h1>
+            <p>Bienvenido a ChocoShop, ¡descubre una amplia variedad de sabores y texturas irresistibles!</p>
+        </div>
+       
+        <div class="productos">
+            <div class="producto">
+                <img src="img/chocolate1.png" alt="Chocolate oscuro">
+                <h2>Chocolate<br> sabor a café</h2>
+                <p>Precio: S/.2.00</p>
+                <div class="cantidad-wrapper">
+                    <button onclick="decrementarCantidad('cantidad-chocolate-oscuro')">-</button>
+                    <input type="number" id="cantidad-chocolate-oscuro" value="1">
+                    <button onclick="incrementarCantidad('cantidad-chocolate-oscuro')">+</button>
+                </div>
+                <button class="boton-comprar" onclick="comprarChocolate('chocolate oscuro')">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="img/chocolate2.png" alt="Chocolate blanco">
+                <h2>Chocolate <br>blanco</h2>
+                <p>Precio: S/.2.00</p>
+                <div class="cantidad-wrapper">
+                    <button onclick="decrementarCantidad('cantidad-chocolate-blanco')">-</button>
+                    <input type="number" id="cantidad-chocolate-blanco" value="1">
+                    <button onclick="incrementarCantidad('cantidad-chocolate-blanco')">+</button>
+                </div>
+                <button class="boton-comprar" onclick="comprarChocolate('chocolate blanco')">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="img/chocolate3.png" alt="Chocolate con leche">
+                <h2>Chocolate<br>crema de maní</h2>
+                <p>Precio: S/.2.00</p>
+                <div class="cantidad-wrapper">
+                    <button onclick="decrementarCantidad('cantidad-chocolate-con-leche')">-</button>
+                    <input type="number" id="cantidad-chocolate-con-leche" value="1">
+                    <button onclick="incrementarCantidad('cantidad-chocolate-con-leche')">+</button>
+                </div>
+                <button class="boton-comprar" onclick="comprarChocolate('chocolate con leche')">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="img/chocolate4.png" alt="Chocolate con leche">
+                <h2>Chocolate<br> cacao 50%</h2>
+                <p>Precio: S/.2.00</p>
+                <div class="cantidad-wrapper">
+                    <button onclick="decrementarCantidad('cantidad-chocolate-con-leche')">-</button>
+                    <input type="number" id="cantidad-chocolate-con-leche" value="1">
+                    <button onclick="incrementarCantidad('cantidad-chocolate-con-leche')">+</button>
+                </div>
+                <button class="boton-comprar" onclick="comprarChocolate('chocolate con leche')">Comprar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chocolate-section" id="what">
+        <h2 class="section-title">¡Descubre una Exquisita Selección de Chocolates!</h2>
+        <div class="chocolate-cards">
+          <div class="chocolate-card">
+            <img src="img/emoticonos.png" alt="Chocolate 1" class="icon-what">
+            <h3 class="card-title">Variedad irresistible</h3>
+            <p class="card-description">Explora nuestros chocolates de primera calidad.</p>
+          </div>
+          <div class="chocolate-card">
+            <img src="img/moto-de-reparto.png" alt="Chocolate 2" class="icon-what">
+            <h3 class="card-title">Compra fácil y segura</h3>
+            <p class="card-description">Disfruta de la comodidad de recibir tus chocolates en casa.</p>
+          </div>
+          <div class="chocolate-card">
+            <img src="img/calidad-de-vida.png" alt="Chocolate 3" class="icon-what">
+            <h3 class="card-title">Calidad excepcional</h3>
+            <p class="card-description">Chocolates seleccionados con esmero para tu deleite.</p>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-heading" id="footer-heading-logo">ChocoShop</h3>
+                <p class="footer-description">Tu tienda de chocolate favorita</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">navega</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=928067140">Contactar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-heading">Redes sociales</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-rights">© 2023 ChocoShop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="nav/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

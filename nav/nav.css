@@ -1,0 +1,93 @@
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  height: 90px;
+  padding: 0 20px;
+  z-index: 999; /* Para asegurar que el navbar se muestre por encima del contenido */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-image {
+  width: 40px; /* Ajusta el tamaño del icono según tus necesidades */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  
+}
+
+.nav-link {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-secondary); /* Cambia el color al pasar el ratón */
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    height: 60px;
+  }
+
+  .nav-links {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+   
+  }
+
+  .nav-toggle {
+    display: block;
+    color: #f5f5f5;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-toggle.active {
+    transform: rotate(90deg);
+  }
+
+  .nav-toggle.active + .nav-links {
+    display: flex;
+  }
+}
