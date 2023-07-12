@@ -17,10 +17,11 @@ function comprarChocolate(chocolate) {
   var cantidadInputId = 'cantidad-' + chocolate.replace(/ /g, "-");
   var cantidad = document.getElementById(cantidadInputId).value;
   
-  var enlaceWhatsApp = 'https://api.whatsapp.com/send?phone=+51925566082&text=¡Hola! Quisiera comprar ' + cantidad + ' chocolate(s) de ' + chocolate;
+  var enlaceWhatsApp = 'https://api.whatsapp.com/send?phone=+51928067140&text=¡Hola! Quisiera comprar ' + cantidad + ' chocolate(s) de ' + chocolate;
   enlaceWhatsApp = encodeURI(enlaceWhatsApp);
   
   window.location.href = enlaceWhatsApp;
 }
+
 
 
