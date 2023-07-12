@@ -313,6 +313,13 @@ p {
   cursor: pointer;
   transform: translateY(-2px);
 }
+.chocolate-card:hover h3 {
+  color: #fff;
+}
+
+.chocolate-card:hover p {
+  color: #fff;
+}
 
 .banner {
   margin-top: 95px;
